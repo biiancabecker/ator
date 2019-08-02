@@ -10,37 +10,37 @@ package modelo;
  * @author Administrador
  */
 public class Ator {
-    private int codigo;
-    private String nome_real;
-    private String nome_artistico;
+    private int Codigo;
+    private String NomeReal;
+    private String NomeArtistico;
 
     public int getCodigo() {
-        return codigo;
+        return Codigo;
     }
 
-    public void setCodigo(int codigo) {
-        this.codigo = codigo;
+    public void setCodigo(int Codigo) {
+        this.Codigo = Codigo;
     }
 
-    public String getNome_real() {
-        return nome_real;
+    public String getNomeReal() {
+        return NomeReal;
     }
 
-    public void setNome_real(String nome_real) {
-        this.nome_real = nome_real;
+    public void setNomeReal(String NomeReal) {
+        this.NomeReal = NomeReal;
     }
 
-    public String getNome_artistico() {
-        return nome_artistico;
+    public String getNomeArtistico() {
+        return NomeArtistico;
     }
 
-    public void setNome_artistico(String nome_artistico) {
-        this.nome_artistico = nome_artistico;
+    public void setNomeArtistico(String NomeArtistico) {
+        this.NomeArtistico = NomeArtistico;
     }
 
     @Override
     public String toString() {
-        return nome_artistico;
+        return "Ator{" + "NomeArtistico=" + NomeArtistico + '}';
     }
     
 }

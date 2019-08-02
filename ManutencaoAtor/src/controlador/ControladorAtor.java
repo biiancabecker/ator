@@ -18,8 +18,8 @@ public class ControladorAtor {
 
     public static void inserir(ManutencaoAtor man){
         Ator objeto = new Ator();
-        objeto.setNome_real(man.jtfNome_real.getText());
-        objeto.setNome_artistico(man.jtfNome_artistico.getText());
+        objeto.setNomeReal(man.jtfNomeReal.getText());
+        objeto.setNomeArtistico(man.jtfNomeArtistico.getText());
         
         boolean resultado = AtorDao.inserir(objeto);
         if (resultado) {
@@ -27,10 +27,31 @@ public class ControladorAtor {
         } else {
             JOptionPane.showMessageDialog(null, "Erro!");
         }
-}
-    
-    public static void inserir(ManutencaoAtor aThis) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
+    public static void alterar(ManutencaoAtor man){
+        Ator objeto = new Ator();
+        //definir todos os atributos
+        objeto.setCodigo(Integer.parseInt(man.jtfCodigo.getText()));
+        objeto.setNomeReal(man.jtfNomeReal.getText());
+        objeto.setNomeArtistico(man.jtfNomeArtistico.getText());
+        
+        boolean resultado = AtorDao.alterar(objeto);
+        if (resultado) {
+            JOptionPane.showMessageDialog(null, "Alterado com sucesso!");
+        } else {
+            JOptionPane.showMessageDialog(null, "Erro!");
+        }
+    }
+
+     public static void excluir(ManutencaoAtor man){
+        Ator objeto = new Ator();
+        objeto.setCodigo(Integer.parseInt(man.jtfCodigo.getText())); //só precisa definir a chave primeira
+        
+        boolean resultado = AtorDao.excluir(objeto);
+        if (resultado) {
+            JOptionPane.showMessageDialog(null, "Excluído com sucesso!");
+        } else {
+            JOptionPane.showMessageDialog(null, "Erro!");
+        }
+    }
 }
